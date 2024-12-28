@@ -10,7 +10,7 @@ There may need to be a change to the make commands in the makefile make run-gene
 
 ```shell
 run-generated:
-	make down && generate-docker-compose.sh ${nproc} && docker compose -f docker-compose.generated.yml up
+	make down && sh ./generate-docker-compose.sh ${nproc} && docker compose -f docker-compose.generated.yml up
 ``` 
 For unix based systems.
 
