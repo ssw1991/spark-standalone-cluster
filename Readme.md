@@ -9,10 +9,6 @@ You can run the spark standalone cluster by running:
 ```shell
 make run
 ```
-or with 3 workers using:
-```shell
-make run-scaled
-```
 You can submit Python jobs with the command:
 ```shell
 make submit app=dir/relative/to/spark_apps/dir
@@ -44,9 +40,9 @@ docker-compose.generated.yml) with the desired number of
 workers where each worker has assigned and exposed port
 number.
 
-To bring up this cluster, you can just run:
+To bring up this cluster, with 3 workers you can just run:
 ```shell
-make run-generated
+make run-generated nproc=3
 ```
 
 By default, the command will launch a Spark cluster with
