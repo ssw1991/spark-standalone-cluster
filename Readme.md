@@ -2,7 +2,17 @@
 
 This repo contains only the skeleton for running
 a spark standalone cluster extracted from [this 
-repo](https://github.com/mrn-aglic/pyspark-playground).
+repo](https://github.com/mrn-aglic/pyspark-playground).  I am not the original author of this repo, it is forked and updated from the link.  
+
+If cloning this to a window's system, and using docker you may need to verify the line endings of entrypoint.sh are unix form.  Most IDE and text editors have a way to do this, just search there documentations.  
+
+There may need to be a change to the make commands in the makefile make run-generated to0 
+
+```shell
+run-generated:
+	make down && generate-docker-compose.sh ${nproc} && docker compose -f docker-compose.generated.yml up
+``` 
+For unix based systems.
 
 # Running the code (Spark standalone cluster)
 You can run the spark standalone cluster by running:
