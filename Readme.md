@@ -64,8 +64,7 @@ To bring up this cluster, with 3 workers you can just run:
 make run-generated nproc=3
 ```
 
-By default, the command will launch a Spark cluster with
-a master, history server and 3 worker nodes. 
+
 
 # Jupyter lab
 After some time, I decided to add a jupyterlab service.
